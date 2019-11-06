@@ -1,2 +1,13 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<h1>Site en construction mais sois quand même le bienvenue</h1>
+
+<p> Mais du coup tu peux tester quelque chose d'assez stylé comme te connecter ou encore t'inscrire sur le site :<br/>
+  <ul>
+    <li><%= link_to "Pour te connecter", new_user_session_path, class: 'btn btn-outline-primary' %></li>
+    <li><%= link_to "Pour t'inscrire", new_user_registration_path, class: 'btn btn-primary' %></li><br/>
+  </ul>
+  <br/>
+  Si jamais tu veux crée un event c'est par la, par contre oublie pas de te connecter avant<br/> 
+  <ul>
+    <li><%= link_to "Pour crée un event", new_event_path, class: 'btn btn-outline-primary' %></li>
+  </ul>
+</p>

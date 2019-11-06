@@ -10,15 +10,15 @@
   </div>
 </div>
 
+<h1>Voici ici le formulaire de création d'Event ehehe</h1>
 
 <%= form_with model: @event do |form| %>
-  <%= form.text_field :first_name %><br/>
-  <%= form.date_field :start_date %><br/>
-  <%= form.number_field :duration %><br/>
-  <%= form.text_field :title %><br/>
-  <%= form.text_field :description %><br/>
-  <%= form.number_field :price %><br/>
-  <%= form.text_field :location %><br/>
-  <%= form.text_field :admin_id %><br/>
+  <%= form.text_field :first_name, placeholder: 'Ton prénom'%><br/>
+  <%= form.date_field :start_date, placeholder: "Le début de l'evenement ?"%><br/>
+  <%= form.number_field :duration, placeholder: 'La durée ?' %><br/>
+  <%= form.text_field :title, placeholder: 'Peut etre un titre ?' %><br/>
+  <%= form.text_field :description, placeholder: "Décris nous l'event" %><br/>
+  <%= form.number_field :price, placeholder: 'Peut être un prix ?' %><br/>
+  <%= form.text_field :location, placeholder: 'Le lieu ?'%><br/>
   <%= form.submit "Create" %>
 <% end %>
