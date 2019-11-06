@@ -21,6 +21,7 @@ class Event < ApplicationRecord
     if start_date.blank? && if start_date < Date.today
       errors.add(:start_date, "Tu arrive a retourner dans le passé toi ??")
     end
+    end
   end
 
   def duration_multiple_of_5
