@@ -68,3 +68,5 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem "letter_opener", :group => :development
 
 gem 'dotenv-rails'
+
+gem 'devise'

@@ -1,0 +1,24 @@
+<div class = "container"><% if @event.errors.any? %>
+  <div class="alert alert-danger" role="alert">&times
+    Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :
+      <ul>
+        <% @event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>
+
+
+<%= form_with model: @event do |form| %>
+  <%= form.text_field :first_name %><br/>
+  <%= form.date_field :start_date %><br/>
+  <%= form.number_field :duration %><br/>
+  <%= form.text_field :title %><br/>
+  <%= form.text_field :description %><br/>
+  <%= form.number_field :price %><br/>
+  <%= form.text_field :location %><br/>
+  <%= form.text_field :admin_id %><br/>
+  <%= form.submit "Create" %>
+<% end %>

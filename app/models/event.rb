@@ -3,7 +3,7 @@ class Event < ApplicationRecord
    has_many :users, through: :attendances
    belongs_to :admin, class_name: "User"
 
-   validate :start_date_cannot_be_in_the_past, :duration_multiple_of_5
+  #  validate :start_date_cannot_be_in_the_past, :duration_multiple_of_5
 
    validates :start_date, presence: true
 
@@ -17,15 +17,16 @@ class Event < ApplicationRecord
 
    validates :location, presence: true
 
-   def start_date_cannot_be_in_the_past
-     if start_date < Date.today
-       errors.add(:start_date, "Tu arrive a retourner dans le passé toi ??")
-     end
-   end
+  #  def start_date_cannot_be_in_the_past
+  #    if start_date.blank? and start_date < Date.today
+  #      errors.add(:start_date, "Tu arrive a retourner dans le passé toi ??")
+  #    end
+  #  end
 
-   def duration_multiple_of_5
-     if duration % 5 != 0
-         errors.add(:duration, "C'est plus facile par 5 tu trouve pas ?")
-     end
-   end
+  #  def duration_multiple_of_5
+  #   return if duration.blank? #on sors de la boucle
+  #    if duration % 5 != 0
+  #        errors.add(:duration, "C'est plus facile par 5 tu trouve pas ?")
+  #    end
+  #  end
 end
